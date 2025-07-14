@@ -9,12 +9,12 @@
 }
 
 /* 白天模式遮罩透明 */
-#footer::before {
+/* #footer::before {
   background: transparent !important;
-}
-#page-header::before {
+} */
+/* #page-header::before {
   background: transparent !important;
-}
+} */
 
 /* 夜间模式遮罩透明 */
 [data-theme="dark"] #footer::before {
@@ -309,6 +309,7 @@ div#archive {
 
 
 
+
 /* 阅读模式 */
 .read-mode #aside-content .card-widget {
   background: rgba(158, 204, 171, 0.5) !important;
@@ -370,6 +371,7 @@ div#archive {
 [data-theme="dark"] #article-container figure.highlight {
   border: 0.5px solid #404040;
 }
+
 
 /* 全局宽度 参考:https://yisous.xyz/posts/d1fc759/ */
 .layout {
@@ -523,4 +525,31 @@ div#archive {
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
+}
+
+/* 欢迎信息 */
+#welcome-info {
+  background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
+  border-radius: 18px;
+  padding: 8px;
+}
+[data-theme="dark"] #welcome-info {
+  background: #212121;
+}
+
+/* 文章插入的图片边框圆角 */
+.post-content img,
+#article-container:has(.fj-gallery, #gitZone, .about_page) img {
+  border-radius: 12px;
+  border: 0.5px solid #80808030;
+}
+
+/* 下一篇文章的圆角 */
+.relatedPosts > .relatedPosts-list > div,
+#pagination.pagination-post,
+.postImgHover img,
+#pagination .prev-post img,
+#pagination .next-post img,
+.relatedPosts > .relatedPosts-list > div img {
+  border-radius: 12px;
 }
